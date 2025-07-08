@@ -1149,6 +1149,7 @@ export class ChannelStartupService {
         }
 
         try {
+          console.log('GlobalWebhook: ', globalWebhook, 'GlobalUrl', globalURL);
           if (globalWebhook && globalWebhook?.ENABLED && isURL(globalURL)) {
             const httpService = axios.create({ baseURL: globalURL });
             const postData = {
